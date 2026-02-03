@@ -67,27 +67,31 @@ print(my_sentence.find("zza"))
 # # #More methods and Python documentation on built-in types here: https://docs.python.org/3/library/stdtypes.html#string-methods
 # print(my_sentence.replace("i", "j"))
 # print("Pizzas" in my_sentence)
-
-# #Python Lists
+0
+#Python Lists
 # my_list = [] #creates empty list
 # my_list.append("pencil")
 # my_list.append("pen")
 # my_list.insert(1, "eraser")
+# my_list.append("pencil")
 # print(my_list)
 # my_list.remove("pencil")
 # print(my_list)
 # my_list.append("pen")
 # print(my_list.count("pen"))
 
-# # Dictionaries
-# my_dictionary = {
-#     "Jane" : 25, 
-#     "Austin" : 27,
-#     "George" : 20
-# }
-# print("Jane's age is: ", my_dictionary["Jane"])
-# print("George's age is: ", my_dictionary.get("George"))
-# print(my_dictionary.keys())
-# print(my_dictionary.values())
-# my_dictionary["Jane"] = 30
-# print("Jane's age is: ", my_dictionary["Jane"])
+# Dictionaries
+my_dictionary = {
+    "Jane" : 25, 
+    "Austin" : 27,
+    "George" : 20
+}
+print("Jane's age is: ", my_dictionary["Jane"])
+print("George's age is: ", my_dictionary.get("George"))
+print(my_dictionary.keys())
+print(my_dictionary.values())
+my_dictionary["Jane"] = 30
+print("Jane's age is: ", my_dictionary["Jane"])
+
+if "George" in my_dictionary:
+    print("George was found")
