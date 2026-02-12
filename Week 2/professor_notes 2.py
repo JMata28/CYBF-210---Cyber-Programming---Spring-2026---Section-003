@@ -36,12 +36,12 @@
 
 # For loops
 # Simple for loop
-fruit_list = ["oranges", "apples", "strawberries", "blueberries"]
+# fruit_list = ["oranges", "apples", "strawberries", "blueberries"]
 # for fruit in fruit_list:  # for and in are keywords. You can use any word instead of fruit as long as you use the same word inside the for loop to refer to the item in the list.
 #     print("I like ", fruit)
 # For Loop within a For loop
-vegetable_list = ["broccoli", "carrot", "celery"]
-groceries = [fruit_list, vegetable_list]
+# vegetable_list = ["broccoli", "carrot", "celery"]
+# groceries = [fruit_list, vegetable_list]
 # for list in groceries:
 #     for item in list:
 #         print("I like ", item)
@@ -75,26 +75,34 @@ groceries = [fruit_list, vegetable_list]
 # for _ in range (3): #in this case, we don't care about the value of _ That's why we name the variable as an underscore. That's the convention in Python whenever you have a variable whose value you don't care about
 #     message_printing() #This line calls the function.
 # # Function with parameters that returns data
-import math #This is a Python library that we will need to implement the hypotenuse function below. More on imports in a later class.
-def hypotenuse(a, b):
-    c = math.sqrt((a**2)+(b**2))
-    return c
+# import math #This is a Python library that we will need to implement the hypotenuse function below. More on imports in a later class.
+# def hypotenuse(a, b):
+#     c = math.sqrt((a**2)+(b**2))
+#     return c
 
-answer = hypotenuse(3, 4)
-print("The hypotenuse is: ", answer)
+# answer = hypotenuse(3, 4)
+# print("The hypotenuse is: ", answer)
 
 #Classes
 #The __init__() method
-# class Student:
-#     tuition = 5000
-#     def __init__(self, first, last, GPA, address):
-#         self.first = first
-#         self.last = last
-#         self.GPA = GPA
-#         self.address_of_student = address
-#     def name(self):
-#         print(f"The name of this student is: {self.first} {self.last}. has a GPA of {self.GPA} and their address is {self.address_of_student}")
-# student_1 = Student("John", "Johnson", 3, "Bridgewater, MA")
-# student_1.name()
-# student_2 = Student("Tyler", "Parker", 4, "Boston. MA")
-# student_2.name()
+class Student:
+    tuition = 5000
+    
+    def __init__(self, first, last, GPA, address):
+        self.first_name = first
+        self.last_name = last
+        self.GPA_score = GPA
+        self.address_of_student = address
+    def name(self):
+        print(f"The name of this student is: {self.first_name} {self.last_name}. has a GPA of {self.GPA_score} and their address is {self.address_of_student}")
+
+
+student_1 = Student("John", "Johnson", 3, "Bridgewater, MA")
+print(student_1.first_name)
+
+student_2 = Student("Tyler", "Parker", 4, "Boston. MA")
+print(student_2.address_of_student)
+
+student_1.name()
+student_2.name()
+
