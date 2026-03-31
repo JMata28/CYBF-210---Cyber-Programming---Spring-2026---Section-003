@@ -40,7 +40,7 @@ def display(first_node):
         curr = curr.next_node
     print(' -> '.join(list_of_nodes))
 
-# display(head_node)
+display(head_node)
 
 #How to search for a node in the linked list
 def search_linked_list(head_node, target_value):
@@ -51,33 +51,33 @@ def search_linked_list(head_node, target_value):
         curr = curr.next_node
     return False
 
-# #What do we expect as output for the next two statements?
+#What do we expect as output for the next two statements?
 # print(search_linked_list(head_node, "nail"))
 # print(search_linked_list(head_node, "helmet"))
-
+ 
 #To delete a specifc node
 def delete_specific_node(head_node, node_to_delete):
   if head_node == node_to_delete:
-    return head_node.next_node
+    return head_node.next_node #if the node to be deleted iw the first node
 
   curr = head_node
   while curr.next_node and curr.next_node != node_to_delete:
-    curr = curr.next_node
+    curr = curr.next_node 
 
   if curr.next_node is None:
-    return head_node
+    return head_node #if the node to be deleted is not found
 
   curr.next_node = curr.next_node.next_node
 
-  return head_node
+  return head_node #if the node to be deleted was succesfully deleted
 
-new_head_node = delete_specific_node(head_node, B)
+new_head_node = delete_specific_node(head_node, head_node)
 display(new_head_node)
 
 #To insert a specific node
 #Let's assume that the position works as a zero-based index (first position is 0, second position is 1, and so on.)
 def insert_Node_At_Position(head_node, new_node, position):
-  if position == 0:
+  if position == 0: #if the new node should be inserted in the first position
     new_node.next_node = head_node
     return new_node
 
@@ -93,5 +93,5 @@ def insert_Node_At_Position(head_node, new_node, position):
   return head_node
 
 new_node = SinglyNode("shovel")
-new_head_node = insert_Node_At_Position(new_head_node, new_node, 1)
+new_head_node = insert_Node_At_Position(new_head_node, new_node, 0)
 display(new_head_node)
