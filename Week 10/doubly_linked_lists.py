@@ -77,8 +77,8 @@ def delete_specific_node_doubly(head_node, tail_node, node_to_delete):
 
     return head_node, tail_node
 
-head_node, tail_node = delete_specific_node_doubly(head_node, tail_node, tail_node)
-display_doubly(head_node)
+# head_node, tail_node = delete_specific_node_doubly(head_node, tail_node, head_node)
+# display_doubly(head_node)
 
 #To insert a new node, assuming what you have is the position (assuming imaginary zero indexing: head_node has an imaginary index of 0, the second node has an imaginary index of 2, and so on and so forth.)
 
