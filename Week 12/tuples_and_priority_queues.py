@@ -33,6 +33,11 @@ print("Heap before the heapify function", list_stu)
 heapq.heapify(list_stu)
 print("Heap after the heapify function", list_stu)
 
+#This is the order of the list items themselves (this won't always match the order of priority)
+# for i in list_stu:
+#   print(i[0],':',i[1])
+
+#This is the order of priority 
 print("The order of presentation is :")
-for i in list_stu:
-  print(i[0],':',i[1])
+for _ in range(len(list_stu)):
+    print(heapq.heappop(list_stu))
