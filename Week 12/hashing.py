@@ -34,6 +34,7 @@ print("'Bob' has hash code:", hash_function('Bob'))
 # def add(name):
 #   index = hash_function(name)
 #   my_list[index] = name
+# print(f"Name {name} has an index of {index}.")
 
 # add('Bob')
 # print(my_list)
